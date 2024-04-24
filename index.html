@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Commands For Inquirer</h1>
+    <h2>npm init -y </h2>
+    <h2>tsc --init</h2>
+    <h2>npm i inquirer</h2>
+    <h2>npm i @types/inquirer -D</h2>
+    <h2>tsc</h2>
+    <h2>node index.js</h2>
+
+    <h1>Changes to Differernt files</h1>
+    <h2>Package.json</h2>
+    <h3>add "type" : "module" </h3>
+    <h1>Tsconfig.json</h1>
+    <h2>    "target": "ES2022",</h2>
+    <h2>    "module": "NodeNext",</h2>
+    <h2>"moduleResolution": "nodenext",</h2>
+
+    <h1>If Tsc command is not running Do the Foloowing steps</h1>
+    <p>The error message you're encountering indicates that PowerShell script execution policies on your system prevent running scripts, including the TypeScript compiler script tsc.ps1. To resolve this, you can either change the execution policy or use a different approach to compile your TypeScript code.
+
+        Here's how to resolve the issue by changing the execution policy:
+        
+        Open PowerShell as Administrator:
+        Right-click on PowerShell and select "Run as administrator".
+        Check Current Execution Policy:
+        Run the following command to check the current execution policy:
+        powershell
+        Copy code
+        <h1>Get-ExecutionPolicy</h1>
+        Change Execution Policy:
+        Run the following command to change the execution policy to allow script execution:
+        powershell
+        Copy code
+        <h1>Set-ExecutionPolicy RemoteSigned</h1>
+        This command allows the execution of scripts that are downloaded from the internet, but requires digitally signed scripts for locally created scripts.If you're in an environment where you can't change the execution policy, you can use the following command to allow script execution just for the current session:
+        powershell
+        Copy code
+        <h1>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass</h1>
+        Confirm Change:
+        When prompted, confirm the change by typing Y and pressing Enter.
+        Retry Running TypeScript Compiler:
+        After changing the execution policy, try running the TypeScript compiler (tsc) again.
+        If you're still having issues or if you prefer an alternative approach, you can use npx to run TypeScript compiler without changing the execution policy:
+        
+        bash
+        Copy code
+        <h1>npx tsc</h1>
+        This command will run tsc from your locally installed Node.js packages without requiring script execution policy changes.
+        
+        Choose the method that best fits your requirements and environment.
+        
+        
+        
+        
+        
+        
+        </p>
+</body>
+</html>
