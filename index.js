@@ -47,6 +47,73 @@ else if (input1.Operator == "Exponentiation") {
 else {
     console.log("Kindly Select An Operator");
 }
-let ishungry = true;
+let ishungry = false;
 let snack = ishungry ? "apple" : "water";
 console.log(`You Should have some ${snack}.`);
+// const { Day }: { Day: string } = await inquirer.prompt([ 
+//     {
+//     name:"Day",
+//     type:"input",
+//     message:"Kindly Enter Any Day Name : "
+//     },
+//     ]);
+//     switch(Day.toLowerCase){
+//         case"monday":
+//         console.log('Go For Work');
+//         break;
+//         case"tuesday":
+//         console.log('Go For Lunch');
+//         break;
+//         case"wednesday":
+//         console.log('Go For Dinner');
+//         break;
+//         case"thursday":
+//         console.log('Go With Friends');
+//         break;
+//         case"friday":
+//         console.log('Go For A Class');
+//         break;
+//         case"saturday":
+//         console.log('Go For A Medical Check-Up');
+//         break;
+//         case"sunday":
+//         console.log('Go For Picnic');
+//         break;
+//         default:
+//             console.log('Please Select Any Day')
+//     }
+async function main() {
+    const { Day } = await inquirer.prompt([
+        {
+            name: "Day",
+            type: "input",
+            message: "Kindly Enter Any Day Name : "
+        }
+    ]);
+    switch (Day.toLowerCase()) {
+        case "monday":
+            console.log('Go For Work');
+            break;
+        case "tuesday":
+            console.log('Go For Lunch');
+            break;
+        case "wednesday":
+            console.log('Go For Dinner');
+            break;
+        case "thursday":
+            console.log('Go With Friends');
+            break;
+        case "friday":
+            console.log('Go For A Class');
+            break;
+        case "saturday":
+            console.log('Go For A Medical Check-Up');
+            break;
+        case "sunday":
+            console.log('Go For Picnic');
+            break;
+        default:
+            console.log('Please Select Any Day');
+    }
+}
+main();
