@@ -240,3 +240,34 @@ let bba=(eg:number,bu:number,sa:number)=>{
 let ppa=bba(5,40,8)
 console.log(ppa)
 
+
+// Recursive function
+// a function calling itself
+function count(nlm:number){
+    if(nlm <= 0){
+        console.log("DONE!");
+        return;
+    }
+    console.log(nlm);
+    count(nlm - 1);
+}
+count(50);
+
+
+// Anonymous Function
+// A function that has no name and it is saved in any expression(Variables) and we can call this function through expressions.
+// setTimeout(function() {
+//     console.log("This is a delayed message.");
+// }, 10000);
+let add = function(a: number, b: number): number {
+    return a + b;
+};
+
+console.log(add(2, 3)); // Output: 5
+
+// Hoisting
+// Hoisting is basically declaration of any function or variable before creating of function or any variable
+down()
+function down(){
+    console.log(4+5)
+}
